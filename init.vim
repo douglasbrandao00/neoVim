@@ -41,11 +41,19 @@ let mapleader="\<space>"
 
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader><F5> :PlugInstall<cr>
-nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<space>
+nnoremap <c-p> :Files<cr>
 nnoremap <c-h> :%s/
 nnoremap <c-q> :q!<cr>
 nnoremap <c-s> :w<cr>
 nnoremap <c-x> :x<cr>
 inoremap <c-s> <Esc>:w<cr>
 map <c-]> :NERDTreeToggle<cr>
+
+
+
+nnoremap <c-Up> :resize +5<cr>
+nnoremap <c-Down> :resize -5<cr>
+
+nnoremap <c-Left> :vertical resize +5<cr>
+nnoremap <c-Right> :vertical resize -5<cr>

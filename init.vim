@@ -2,17 +2,18 @@ call plug#begin('~/.config/nvim/autoload')
 
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'roxma/nvim-completion-manager'
-Plug 'w0rp/ale'
 Plug 'cohama/lexima.vim'
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 Plug 'pangloss/vim-javascript'
 Plug 'ajh17/VimCompletesMe'
+
+"FronEnd plugins
+Plug 'alvan/vim-closetag'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -37,6 +38,7 @@ set clipboard=unnamed
 set expandtab
 set shiftwidth=2
 
+let g:closetag_filenames = '*.html, *ejs'
 let mapleader="\<space>"
 
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -51,9 +53,11 @@ inoremap <c-s> <Esc>:w<cr>
 map <c-]> :NERDTreeToggle<cr>
 
 
+nnoremap <F3> :split 
+nnoremap <F4> :vsplit 
 
-nnoremap <c-Up> :resize +5<cr>
-nnoremap <c-Down> :resize -5<cr>
+map <F5> :resize +5<cr>
+map <F6> :resize -5<cr>
 
-nnoremap <c-Left> :vertical resize +5<cr>
-nnoremap <c-Right> :vertical resize -5<cr>
+map <F7> :vertical resize -5<cr>
+map <F8> :vertical resize +5<cr>
